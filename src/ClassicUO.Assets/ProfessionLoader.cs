@@ -119,7 +119,7 @@ namespace ClassicUO.Assets
                         }
                     }
 
-                    Professions[new ProfessionInfo
+                    /*Professions[new ProfessionInfo
                     {
                         Name = "Advanced",
                         Localization = 1061176,
@@ -129,7 +129,7 @@ namespace ClassicUO.Assets
                         Type = PROF_TYPE.PROFESSION,
                         DescriptionIndex = -1,
                         TrueName = "advanced"
-                    }] = null;
+                    }] = null;*/
 
                     foreach (KeyValuePair<ProfessionInfo, List<ProfessionInfo>> kvp in Professions)
                     {

@@ -65,7 +65,7 @@ namespace ClassicUO.Game.UI.Gumps
 
     internal class SystemChatControl : Control
     {
-        private const int MAX_MESSAGE_LENGHT = 100;
+        private const int MAX_MESSAGE_LENGHT = 255;
         private const int CHAT_X_OFFSET = 3;
         private const int CHAT_HEIGHT = 15;
         private static readonly List<Tuple<ChatMode, string>> _messageHistory = new List<Tuple<ChatMode, string>>();

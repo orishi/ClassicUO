@@ -186,7 +186,7 @@ namespace ClassicUO.Game.UI.Gumps.CharCreation
                 1
             );
 
-            Add
+            /*Add
             (
                 _elfRadio = new Button((int)Buttons.ElfButton, 0x0768, 0x0767, 0x0768)
                 {
@@ -223,7 +223,7 @@ namespace ClassicUO.Game.UI.Gumps.CharCreation
                     },
                     1
                 );
-            }
+            }*/
 
             // Prev/Next
             Add

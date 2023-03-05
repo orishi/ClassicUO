@@ -1718,7 +1718,7 @@ namespace ClassicUO.Game.UI.Gumps
             SettingsSection section3 = AddSettingsSection(box, "Lights");
             section3.Y = section2.Bounds.Bottom + 40;
 
-            section3.Add
+            /*section3.Add
             (
                 _altLights = AddCheckBox
                 (
@@ -1793,7 +1793,7 @@ namespace ClassicUO.Game.UI.Gumps
                     startX,
                     startY
                 )
-            );
+            );*/
 
 
             SettingsSection section4 = AddSettingsSection(box, "Misc");
@@ -3550,11 +3550,11 @@ namespace ClassicUO.Game.UI.Gumps
                     _enableBlackWhiteEffect.IsChecked = true;
                     Client.Game.Scene.Camera.Zoom = 1f;
                     _currentProfile.DefaultScale = 1f;
-                    _lightBar.Value = 0;
+                    /*_lightBar.Value = 0;
                     _enableLight.IsChecked = false;
                     _lightLevelType.SelectedIndex = 0;
                     _useColoredLights.IsChecked = false;
-                    _darkNights.IsChecked = false;
+                    _darkNights.IsChecked = false;*/
                     _enableShadows.IsChecked = true;
                     _enableShadowsStatics.IsChecked = true;
                     _terrainShadowLevel.Value = 15;
@@ -3938,7 +3938,7 @@ namespace ClassicUO.Game.UI.Gumps
                 Client.Game.SetWindowBorderless(_windowBorderless.IsChecked);
             }
 
-            _currentProfile.UseAlternativeLights = _altLights.IsChecked;
+            /*_currentProfile.UseAlternativeLights = _altLights.IsChecked;
             _currentProfile.UseCustomLightLevel = _enableLight.IsChecked;
             _currentProfile.LightLevel = (byte) (_lightBar.MaxValue - _lightBar.Value);
             _currentProfile.LightLevelType = _lightLevelType.SelectedIndex;
@@ -3955,7 +3955,7 @@ namespace ClassicUO.Game.UI.Gumps
             }
 
             _currentProfile.UseColoredLights = _useColoredLights.IsChecked;
-            _currentProfile.UseDarkNights = _darkNights.IsChecked;
+            _currentProfile.UseDarkNights = _darkNights.IsChecked;*/
             _currentProfile.ShadowsEnabled = _enableShadows.IsChecked;
             _currentProfile.ShadowsStatics = _enableShadowsStatics.IsChecked;
             _currentProfile.TerrainShadowsLevel = _terrainShadowLevel.Value;

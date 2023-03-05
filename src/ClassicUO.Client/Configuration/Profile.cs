@@ -55,17 +55,17 @@ namespace ClassicUO.Configuration
         // sounds
         public bool EnableSound { get; set; } = true;
         public int SoundVolume { get; set; } = 100;
-        public bool EnableMusic { get; set; } = true;
+        public bool EnableMusic { get; set; } = false;
         public int MusicVolume { get; set; } = 100;
         public bool EnableFootstepsSound { get; set; } = true;
-        public bool EnableCombatMusic { get; set; } = true;
-        public bool ReproduceSoundsInBackground { get; set; }
+        public bool EnableCombatMusic { get; set; } = false;
+        public bool ReproduceSoundsInBackground { get; set; } = true;
 
         // fonts and speech
         public byte ChatFont { get; set; } = 1;
         public int SpeechDelay { get; set; } = 100;
         public bool ScaleSpeechDelay { get; set; } = true;
-        public bool SaveJournalToFile { get; set; } = true;
+        public bool SaveJournalToFile { get; set; } = false;
         public bool ForceUnicodeJournal { get; set; }
         public bool IgnoreAllianceMessages { get; set; }
         public bool IgnoreGuildMessages { get; set; }
@@ -137,7 +137,7 @@ namespace ClassicUO.Configuration
         public byte TooltipFont { get; set; } = 1;
 
         // movements
-        public bool EnablePathfind { get; set; }
+        public bool EnablePathfind { get; set; } = false;
         public bool UseShiftToPathfind { get; set; }
         public bool AlwaysRun { get; set; }
         public bool AlwaysRunUnlessHidden { get; set; }
@@ -147,13 +147,13 @@ namespace ClassicUO.Configuration
         public bool HoldShiftToSplitStack { get; set; } = false;
 
         // general
-        public Point WindowClientBounds { get; set; } = new Point(600, 480);
+        public Point WindowClientBounds { get; set; } = new Point(1024, 768);
         public Point ContainerDefaultPosition { get; set; } = new Point(24, 24);
         public Point GameWindowPosition { get; set; } = new Point(10, 10);
         public bool GameWindowLock { get; set; }
         public bool GameWindowFullSize { get; set; }
         public bool WindowBorderless { get; set; } = false;
-        public Point GameWindowSize { get; set; } = new Point(600, 480);
+        public Point GameWindowSize { get; set; } = new Point(1024, 768);
         public Point TopbarGumpPosition { get; set; } = new Point(0, 0);
         public bool TopbarGumpIsMinimized { get; set; }
         public bool TopbarGumpIsDisabled { get; set; }
@@ -164,8 +164,8 @@ namespace ClassicUO.Configuration
         public bool UseColoredLights { get; set; } = true;
         public bool UseDarkNights { get; set; }
         public int CloseHealthBarType { get; set; } // 0 = none, 1 == not exists, 2 == is dead
-        public bool ActivateChatAfterEnter { get; set; }
-        public bool ActivateChatAdditionalButtons { get; set; } = true;
+        public bool ActivateChatAfterEnter { get; set; } = false;
+        public bool ActivateChatAdditionalButtons { get; set; } = false;
         public bool ActivateChatShiftEnterSupport { get; set; } = true;
         public bool UseObjectsFading { get; set; } = true;
         public bool HoldDownKeyAltToCloseAnchored { get; set; } = true;
@@ -227,7 +227,7 @@ namespace ClassicUO.Configuration
         public int CounterBarColumns { get; set; } = 1;
 
         public bool ShowSkillsChangedMessage { get; set; } = true;
-        public int ShowSkillsChangedDeltaValue { get; set; } = 1;
+        public int ShowSkillsChangedDeltaValue { get; set; } = 0;
         public bool ShowStatsChangedMessage { get; set; } = true;
 
 
@@ -235,7 +235,7 @@ namespace ClassicUO.Configuration
         public bool ShadowsStatics { get; set; } = true;
         public int TerrainShadowsLevel { get; set; } = 15;
         public int AuraUnderFeetType { get; set; } // 0 = NO, 1 = in warmode, 2 = ctrl+shift, 3 = always
-        public bool AuraOnMouse { get; set; } = true;
+        public bool AuraOnMouse { get; set; } = false;
         public bool AnimatedWaterEffect { get; set; } = false;
 
         public bool PartyAura { get; set; }
@@ -253,9 +253,9 @@ namespace ClassicUO.Configuration
 
         public int GridLootType { get; set; } // 0 = none, 1 = only grid, 2 = both
 
-        public bool ReduceFPSWhenInactive { get; set; } = true;
+        public bool ReduceFPSWhenInactive { get; set; } = false;
 
-        public bool OverrideAllFonts { get; set; }
+        public bool OverrideAllFonts { get; set; } = true;
         public bool OverrideAllFontsIsUnicode { get; set; } = true;
 
         public bool SallosEasyGrab { get; set; }
@@ -282,10 +282,10 @@ namespace ClassicUO.Configuration
 
         public bool IgnoreStaminaCheck { get; set; } = false;
 
-        public bool ShowJournalClient { get; set; } = true;
+        public bool ShowJournalClient { get; set; } = false;
         public bool ShowJournalObjects { get; set; } = true;
         public bool ShowJournalSystem { get; set; } = true;
-        public bool ShowJournalGuildAlly { get; set; } = true;
+        public bool ShowJournalGuildAlly { get; set; } = false;
 
         public int WorldMapWidth { get; set; } = 400;
         public int WorldMapHeight { get; set; } = 400;

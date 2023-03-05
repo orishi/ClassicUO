@@ -67,7 +67,7 @@ namespace ClassicUO.Game.UI.Gumps
 
         private GumpPic _picBase;
         private GumpPic _profilePic;
-        private readonly EquipmentSlot[] _slots = new EquipmentSlot[6];
+        private readonly EquipmentSlot[] _slots = new EquipmentSlot[8];
         private Label _titleLabel;
         private GumpPic _virtueMenuPic;
         private Button _warModeBtn;
@@ -188,8 +188,8 @@ namespace ClassicUO.Game.UI.Gumps
                     }
                 );
 
-                if (Client.Version < ClientVersion.CV_500A)
-                {
+                /*if (Client.Version < ClientVersion.CV_500A)
+                {*/
                     // JOURNAL BUTTON
                     Add
                     (
@@ -200,7 +200,7 @@ namespace ClassicUO.Game.UI.Gumps
                             ButtonAction = ButtonAction.Activate
                         }
                     );
-                }
+                /*}
                 else
                 {
                     // QUESTS BUTTON
@@ -213,7 +213,7 @@ namespace ClassicUO.Game.UI.Gumps
                             ButtonAction = ButtonAction.Activate
                         }
                     );
-                }
+                }*/
 
                 // SKILLS BUTTON
                 Add
@@ -227,7 +227,7 @@ namespace ClassicUO.Game.UI.Gumps
                 );
 
                 // GUILD BUTTON
-                Add
+                /*Add
                 (
                     new Button((int)Buttons.Guild, 0x57b2, 0x57b4, 0x57b3)
                     {
@@ -235,7 +235,7 @@ namespace ClassicUO.Game.UI.Gumps
                         Y = 44 + 27 * 5,
                         ButtonAction = ButtonAction.Activate
                     }
-                );
+                );*/
 
                 // TOGGLE PEACE/WAR BUTTON
                 Mobile mobile = World.Mobiles.Get(LocalSerial);
@@ -257,18 +257,18 @@ namespace ClassicUO.Game.UI.Gumps
                 int profileX = 25;
                 const int SCROLLS_STEP = 14;
 
-                if (showRacialAbilitiesBook)
+                /*if (showRacialAbilitiesBook)
                 {
                     profileX += SCROLLS_STEP;
-                }
+                }*/
 
                 Add(_profilePic = new GumpPic(profileX, 196, 0x07D2, 0));
                 _profilePic.MouseDoubleClick += Profile_MouseDoubleClickEvent;
 
                 profileX += SCROLLS_STEP;
 
-                Add(_partyManifestPic = new GumpPic(profileX, 196, 0x07D2, 0));
-                _partyManifestPic.MouseDoubleClick += PartyManifest_MouseDoubleClickEvent;
+                /*Add(_partyManifestPic = new GumpPic(profileX, 196, 0x07D2, 0));
+                _partyManifestPic.MouseDoubleClick += PartyManifest_MouseDoubleClickEvent;*/
 
 
                 _hitBox = new HitBox(228, 260, 16, 16);
@@ -366,10 +366,36 @@ namespace ClassicUO.Game.UI.Gumps
                     0,
                     2,
                     75 + 21 * 5,
-                    Layer.Tunic,
+                    Layer.Talisman,
                     this
                 )
             );
+
+            Add
+            (
+                _slots[6] = new EquipmentSlot
+                (
+                    0,
+                    2,
+                    75 + 21 * 6,
+                    Layer.Waist,
+                    this
+                )
+            );
+
+            Add
+            (
+                _slots[7] = new EquipmentSlot
+                (
+                    0,
+                    2,
+                    75 + 21 * 7,
+                    Layer.OneHanded,
+                    this
+                )
+            );
+
+            
 
             // Paperdoll control!
             _paperDollInteractable = new PaperDollInteractable(8, 19, LocalSerial, this);
@@ -377,12 +403,12 @@ namespace ClassicUO.Game.UI.Gumps
 
             if (showPaperdollBooks)
             {
-                Add(_combatBook = new GumpPic(156, 200, 0x2B34, 0));
-                _combatBook.MouseDoubleClick += (sender, e) => { GameActions.OpenAbilitiesBook(); };
+                /*Add(_combatBook = new GumpPic(156, 200, 0x2B34, 0));
+                _combatBook.MouseDoubleClick += (sender, e) => { GameActions.OpenAbilitiesBook(); };*/
 
                 if (showRacialAbilitiesBook)
                 {
-                    Add(_racialAbilitiesBook = new GumpPic(23, 200, 0x2B28, 0));
+                    /*Add(_racialAbilitiesBook = new GumpPic(23, 200, 0x2B28, 0));
 
                     _racialAbilitiesBook.MouseDoubleClick += (sender, e) =>
                     {
@@ -390,7 +416,7 @@ namespace ClassicUO.Game.UI.Gumps
                         {
                             UIManager.Add(new RacialAbilitiesBookGump(100, 100));
                         }
-                    };
+                    };*/
                 }
             }
 

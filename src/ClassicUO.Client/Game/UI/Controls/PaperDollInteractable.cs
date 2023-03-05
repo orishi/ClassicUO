@@ -326,10 +326,10 @@ namespace ClassicUO.Game.UI.Controls
 
                 int bx = 0;
 
-                if (World.ClientFeatures.PaperdollBooks)
+                /*if (World.ClientFeatures.PaperdollBooks)
                 {
                     bx = 6;
-                }
+                }*/
 
                 Add
                 (
